@@ -1,5 +1,5 @@
 build:
-  version: "productxxx"
+  version: "product config server"
 
 accounts:
   message: "Welcome to EazyBank accounts related local APIs "
