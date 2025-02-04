@@ -6,18 +6,20 @@ spring:
   profiles:
     active: "prod"
   datasource:
-    url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
-    username: sa
-    password: ''
-  h2:
-    console:
-      enabled: true
+    url: "jdbc:oracle:thin:@//localhost:1521/accounts"
+    username: "admin"
+    password: "123456"
+    driver-class-name: oracle.jdbc.OracleDriver
   jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
-    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    database-platform: org.hibernate.dialect.OracleDialect
 #  config:
 #    import:
 #      - "application_qa.yml"
@@ -39,3 +41,5 @@ accounts:
   onCallSupport:
     - (555) 555-1234
     - (555) 523-1345
+#    sqlplus admin/123456@localhost:1521/accounts
+
