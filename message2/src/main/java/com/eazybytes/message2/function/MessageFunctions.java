@@ -1,13 +1,11 @@
-package com.eazybytes.message.function;
+package com.eazybytes.message2.function;
 
-
-import com.eazybytes.message.dto.AccountMsgDto;
+import com.eazybytes.message2.dto.AccountMsgDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 
@@ -31,5 +29,4 @@ public class MessageFunctions {
             return accountMsgDto.accountNumber();
         };
     }
-
 }
